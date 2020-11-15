@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.userNameLabel.text = StartUsername.username
+        self.userNameLabel.text = UserDefaults.standard.string(forKey: "Value Username")
         userNameLabel.textColor = .black
         
     }

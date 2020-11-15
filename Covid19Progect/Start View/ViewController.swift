@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let storage = UserDefaults.standard
+    let keyForUsername = "Value Username"
+    
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
@@ -28,11 +31,16 @@ class ViewController: UIViewController {
                         self?.view.layoutIfNeeded()
           }, completion: nil)
         
+        if let writeASavedUsername = storage.string(forKey: keyForUsername) {
+            userName.text = writeASavedUsername
+        }
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
     
     
@@ -49,15 +57,24 @@ class ViewController: UIViewController {
         
     }
     
+    
+    func saveUsername() {
+        
+        storage.setValue(userName.text, forKey: keyForUsername)
+        storage.synchronize()
+    }
+    
+    
     @IBAction func PressedLogin(_ sender: UIButton) {
         
-        StartUsername.username = userName.text
+        saveUsername()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         present(viewController, animated: true, completion: nil)
         
     }
+    
     
     func textFieldWithText() {
         if userName.text! != "" && password.text! != "" {
@@ -67,16 +84,14 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func userNameAction(_ sender: UITextField) {
         textFieldWithText()
     }
+    
     
     @IBAction func passwordAction(_ sender: UITextField) {
         textFieldWithText()
     }
     
-}
-
-struct StartUsername {
-    static var username: String?
 }

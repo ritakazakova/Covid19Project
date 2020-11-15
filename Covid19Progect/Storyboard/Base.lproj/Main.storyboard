@@ -281,7 +281,9 @@
         <scene sceneID="ItJ-xv-0nj">
             <objects>
                 <navigationController id="xda-nd-lC9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cases" id="vfJ-uI-lQP"/>
+                    <tabBarItem key="tabBarItem" title="Cases" id="vfJ-uI-lQP">
+                        <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CZd-GE-SEn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
