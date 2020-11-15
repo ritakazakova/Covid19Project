@@ -13,12 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userNameTopView: NSLayoutConstraint!
-    
+    @IBOutlet var loginBottomView: NSLayoutConstraint!
     
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
                 
-        userNameTopView.constant = 200
+        userNameTopView.constant = 100
+        loginBottomView.constant = 100
         
         UIView.animate(withDuration: 0.8,
                        delay: 0,
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
           }, completion: nil)
         
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +41,14 @@ class ViewController: UIViewController {
       
         login.isEnabled = false
         
-        userName.text = ""
         password.text = ""
-
+        
         
         userNameTopView.constant += view.bounds.maxY
-
+        loginBottomView.constant -= view.bounds.maxY
+        
     }
-
+    
     @IBAction func PressedLogin(_ sender: UIButton) {
         
         StartUsername.username = userName.text

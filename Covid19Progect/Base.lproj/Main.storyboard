@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56a-cE-91X">
-                                <rect key="frame" x="132" y="664" width="150" height="50"/>
+                                <rect key="frame" x="132" y="712" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Mil-EP-g5p"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NrN-cK-iE8">
-                                <rect key="frame" x="57" y="244" width="300" height="50"/>
+                                <rect key="frame" x="57" y="144" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Z5W-oV-Erd"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFo-P5-8nW">
-                                <rect key="frame" x="57" y="344" width="300" height="50"/>
+                                <rect key="frame" x="57" y="244" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -55,12 +55,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="56a-cE-91X" secondAttribute="bottom" constant="100" id="14Z-Gv-Q4S"/>
                             <constraint firstItem="56a-cE-91X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Jo-N9-M7l"/>
                             <constraint firstItem="BFo-P5-8nW" firstAttribute="top" secondItem="NrN-cK-iE8" secondAttribute="bottom" constant="50" id="7C4-EZ-EXB"/>
                             <constraint firstItem="BFo-P5-8nW" firstAttribute="width" secondItem="NrN-cK-iE8" secondAttribute="width" id="BQr-OX-gLg"/>
-                            <constraint firstItem="NrN-cK-iE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="euY-Gs-Etl"/>
+                            <constraint firstItem="NrN-cK-iE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="euY-Gs-Etl"/>
                             <constraint firstItem="BFo-P5-8nW" firstAttribute="height" secondItem="NrN-cK-iE8" secondAttribute="height" id="f7R-M3-DEU"/>
-                            <constraint firstItem="56a-cE-91X" firstAttribute="top" secondItem="BFo-P5-8nW" secondAttribute="bottom" constant="270" id="kWM-H0-lsH"/>
                             <constraint firstItem="NrN-cK-iE8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oDb-7I-nBJ"/>
                             <constraint firstItem="BFo-P5-8nW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w3A-UJ-rOv"/>
                         </constraints>
@@ -68,6 +68,7 @@
                     <navigationItem key="navigationItem" id="Pgk-8N-3ko"/>
                     <connections>
                         <outlet property="login" destination="56a-cE-91X" id="ASv-2Z-2An"/>
+                        <outlet property="loginBottomView" destination="14Z-Gv-Q4S" id="Aoa-uj-ec1"/>
                         <outlet property="password" destination="BFo-P5-8nW" id="Dbc-hf-EM6"/>
                         <outlet property="userName" destination="NrN-cK-iE8" id="NAf-kx-fSp"/>
                         <outlet property="userNameTopView" destination="euY-Gs-Etl" id="3HL-xy-uZC"/>
