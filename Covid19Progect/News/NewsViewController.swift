@@ -9,10 +9,6 @@ import UIKit
 
 private let reuseIdentifire = "CollectionCell"
 
-struct Article: Codable {
-    let author: String
-    let title: String
-}
 
 class NewsViewController: UICollectionViewController {
     

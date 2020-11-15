@@ -8,17 +8,6 @@
 import UIKit
 
 
-struct Country: Codable {
-    var country: String
-    var latest: Latest
-}
-
-struct Latest: Codable {
-    var confirmed: Int
-    var death: Int
-}
-
-
 class CasesViewController: UITableViewController {
     
     let arrayCountries: [Country] = [Country(country: "German", latest: Latest.init(confirmed: 5, death: 4)), Country(country: "Belarus", latest: Latest.init(confirmed: 3, death: 1)), Country(country: "Igypt", latest: Latest.init(confirmed: 8, death: 3))]
