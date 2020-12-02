@@ -9,20 +9,26 @@ import UIKit
 
 class DetailCasesViewController: UIViewController {
     
-    @IBOutlet weak var confirmedLabel: UILabel!
-    @IBOutlet weak var deathLabel: UILabel!
+    @IBOutlet weak var infectedLabel: UILabel!
+    @IBOutlet weak var recoveredLabel: UILabel!
     @IBOutlet weak var titleCountry: UINavigationItem!
     
     
-    var country: Country?
+    var cases: Case?
     
     
     override func viewDidLoad() {
         super .viewDidLoad()
         
-        confirmedLabel.text = "Confirmed: \(country!.latest.confirmed)"
-        deathLabel.text = "Death: \(country!.latest.death)"
-        titleCountry.title = country!.country
+        
+        if let recoveredInt1 = cases?.recovered {
+            recoveredLabel.text = "Recovered: \(recoveredInt1)"
+        } else {
+            recoveredLabel.text = "Recovered: -"
+        }
+        
+        infectedLabel.text = "Infected: \(cases!.infected)"
+        titleCountry.title = cases!.country
         
     }
     

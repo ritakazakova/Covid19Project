@@ -10,10 +10,12 @@ import UIKit
 
 class CasesViewController: UITableViewController {
     
-    let arrayCountries: [Country] = [Country(country: "German", latest: Latest.init(confirmed: 5, death: 4)), Country(country: "Belarus", latest: Latest.init(confirmed: 3, death: 1)), Country(country: "Igypt", latest: Latest.init(confirmed: 8, death: 3))]
+    var arrayCountries = [Case]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadDataForCase()
         
     }
     
@@ -28,15 +30,22 @@ class CasesViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "DetailCasesViewController") as! DetailCasesViewController
-        viewController.country = arrayCountries[indexPath.row]
+        viewController.cases = arrayCountries[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath)
+        let recoveredString: String
         
-        let textInCell = "\(arrayCountries[indexPath.row].country)  Confirmed: \(arrayCountries[indexPath.row].latest.confirmed)  Death: \(arrayCountries[indexPath.row].latest.death)"
+        if let recoveredInt = arrayCountries[indexPath.row].recovered {
+            recoveredString = "\(recoveredInt)"
+        } else {
+            recoveredString = "-"
+        }
+        
+        let textInCell = "\(arrayCountries[indexPath.row].country)  Infected: \(arrayCountries[indexPath.row].infected)  Recovered: \(recoveredString) "
         
         
         cell.textLabel?.text = textInCell
@@ -45,7 +54,31 @@ class CasesViewController: UITableViewController {
         return cell
     }
     
+    
+    func loadDataForCase() {
+        let session = URLSession(configuration: .default)
+        
+        guard let sessionURL = URL(string: "https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true")
+        else {return}
+        let urlRequest = URLRequest(url: sessionURL)
+        let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                print(error)
+            }
+            if let data = data {
+                do {
+                    let response = try JSONDecoder().decode([Case].self, from: data)
+                    self.arrayCountries = response
+                    print(response.count)
+                    DispatchQueue.main.async { [self] in
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }
+        dataTask.resume()
+    }
+        
 }
-
-
-

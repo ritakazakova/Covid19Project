@@ -268,8 +268,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Country" id="tqL-sw-CIk"/>
                     <connections>
-                        <outlet property="confirmedLabel" destination="xuS-LP-lLZ" id="DEL-wd-5jJ"/>
-                        <outlet property="deathLabel" destination="Usx-J8-F9s" id="hRg-E1-DOk"/>
+                        <outlet property="infectedLabel" destination="xuS-LP-lLZ" id="4q3-YC-IyR"/>
+                        <outlet property="recoveredLabel" destination="Usx-J8-F9s" id="qTP-vc-jdz"/>
                         <outlet property="titleCountry" destination="tqL-sw-CIk" id="Lni-rG-tXx"/>
                     </connections>
                 </viewController>

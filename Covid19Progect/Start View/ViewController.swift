@@ -40,7 +40,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     
@@ -51,10 +50,8 @@ class ViewController: UIViewController {
         
         password.text = ""
         
-        
         userNameTopView.constant += view.bounds.maxY
         loginBottomView.constant -= view.bounds.maxY
-        
     }
     
     
@@ -72,7 +69,6 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         present(viewController, animated: true, completion: nil)
-        
     }
     
     
