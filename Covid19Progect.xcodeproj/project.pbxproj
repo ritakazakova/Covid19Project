@@ -17,6 +17,7 @@
 		11550A392556CC8E0020B755 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11550A382556CC8E0020B755 /* NewsViewController.swift */; };
 		11550A3C2556CCAF0020B755 /* CasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11550A3B2556CCAF0020B755 /* CasesViewController.swift */; };
 		115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703C6257C0A2C00AD3F12 /* StructArticles.swift */; };
+		115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703CB257D287600AD3F12 /* StructImageInfo.swift */; };
 		116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0125618BA200DE49C8 /* StructArticle.swift */; };
 		116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0525618CD000DE49C8 /* StructCase.swift */; };
 		117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */; };
@@ -36,6 +37,7 @@
 		11550A382556CC8E0020B755 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		11550A3B2556CCAF0020B755 /* CasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesViewController.swift; sourceTree = "<group>"; };
 		115703C6257C0A2C00AD3F12 /* StructArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructArticles.swift; sourceTree = "<group>"; };
+		115703CB257D287600AD3F12 /* StructImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructImageInfo.swift; sourceTree = "<group>"; };
 		116DEC0125618BA200DE49C8 /* StructArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructArticle.swift; sourceTree = "<group>"; };
 		116DEC0525618CD000DE49C8 /* StructCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCase.swift; sourceTree = "<group>"; };
 		117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				11550A382556CC8E0020B755 /* NewsViewController.swift */,
 				117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */,
 				116DEC0125618BA200DE49C8 /* StructArticle.swift */,
+				115703CB257D287600AD3F12 /* StructImageInfo.swift */,
 				115703C6257C0A2C00AD3F12 /* StructArticles.swift */,
 			);
 			path = News;
@@ -217,6 +220,7 @@
 				116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */,
 				11550A392556CC8E0020B755 /* NewsViewController.swift in Sources */,
 				11550A3C2556CCAF0020B755 /* CasesViewController.swift in Sources */,
+				115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */,
 				111BD997254F0EE700FBCA3D /* SceneDelegate.swift in Sources */,
 				116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */,
 				115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */,
@@ -368,6 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Covid19Progect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Covid19Progect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

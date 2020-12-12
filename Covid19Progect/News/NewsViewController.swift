@@ -14,6 +14,7 @@ class NewsViewController: UICollectionViewController {
     
     
     var arrayArticle = [Article]()
+    var arrayImage = [ImageInfo]()
     
     
     override func viewDidLoad() {
@@ -45,9 +46,31 @@ class NewsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewsCollectionViewCell
         
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+         
+        let dateString = "\(arrayArticle[indexPath.row].publishedAt)"
+        let date = dateFormatter.date(from: dateString)
+        
+        let prettyDateFormatter = DateFormatter()
+        prettyDateFormatter.dateStyle = .medium
+        prettyDateFormatter.timeStyle = .short
+        
+        let outputDate: String?
+        
+        if let dateDate = date {
+            outputDate = prettyDateFormatter.string(from: dateDate)
+        } else {
+            outputDate = nil
+        }
+        
         cell.authorLabel?.text = arrayArticle[indexPath.row].author
         cell.titleLabel?.text = arrayArticle[indexPath.row].title
-//        cell.imageNews?.image = arrayArticle[indexPath.row].urlToImage
+        cell.dateLabel.text = outputDate
+        //        cell.imageNews?.image = arrayArticle[indexPath.row].urlToImage
         
         return cell
     }
@@ -66,6 +89,11 @@ class NewsViewController: UICollectionViewController {
                 do {
                     let response = try JSONDecoder().decode(Articles.self, from: data)
                     self.arrayArticle = response.articles
+                    for element in response.articles{
+//                        self.arrayImage.append(ImageInfo(image: nil, url: urlRequest, isLoading: <#T##Bool#>))
+                        
+                    }
+                    
                     print(response.articles.count)
                     DispatchQueue.main.async { [self] in
                         self.collectionView.reloadData()

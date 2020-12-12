@@ -171,32 +171,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPj-XT-muL">
-                                            <rect key="frame" x="10" y="125.5" width="31" height="14.5"/>
+                                            <rect key="frame" x="10" y="107.5" width="31" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-vy-10u">
-                                            <rect key="frame" x="54" y="10" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-vy-10u">
+                                            <rect key="frame" x="10" y="10" width="42" height="47"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezC-kt-5FG">
+                                            <rect key="frame" x="10" y="127" width="31" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="zyU-CV-A1S" secondAttribute="bottom" id="5Eg-pb-y79"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uKs-vy-10u" secondAttribute="trailing" constant="10" id="EAv-Vg-M7e"/>
                                         <constraint firstItem="zyU-CV-A1S" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" id="Hoh-Qb-3wt"/>
                                         <constraint firstItem="uKs-vy-10u" firstAttribute="top" secondItem="ixH-AI-X6w" secondAttribute="top" constant="10" id="IeV-VU-3ZS"/>
-                                        <constraint firstItem="uKs-vy-10u" firstAttribute="centerX" secondItem="ixH-AI-X6w" secondAttribute="centerX" id="KPk-6a-APn"/>
-                                        <constraint firstAttribute="bottom" secondItem="ZPj-XT-muL" secondAttribute="bottom" constant="10" id="Nl7-7a-zMm"/>
+                                        <constraint firstItem="uKs-vy-10u" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="L3L-c2-cOX"/>
+                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="R6c-DG-bqT"/>
                                         <constraint firstItem="zyU-CV-A1S" firstAttribute="top" secondItem="ixH-AI-X6w" secondAttribute="top" id="V3W-B6-Wpr"/>
                                         <constraint firstItem="ZPj-XT-muL" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="ZbV-QB-Ndk"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZPj-XT-muL" secondAttribute="trailing" constant="10" id="dnd-Rt-HJs"/>
+                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="top" secondItem="ZPj-XT-muL" secondAttribute="bottom" constant="5" id="uNA-ev-jd1"/>
+                                        <constraint firstAttribute="bottom" secondItem="ezC-kt-5FG" secondAttribute="bottom" constant="8" id="vnF-Il-OXD"/>
                                         <constraint firstAttribute="trailing" secondItem="zyU-CV-A1S" secondAttribute="trailing" id="wjG-kD-qRv"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="0.93053671979999997" green="0.55362296820000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="ZPj-XT-muL" id="Woq-EN-F71"/>
+                                    <outlet property="dateLabel" destination="ezC-kt-5FG" id="9Lr-32-4LB"/>
                                     <outlet property="imageNews" destination="zyU-CV-A1S" id="bMd-kV-Nhk"/>
                                     <outlet property="titleLabel" destination="uKs-vy-10u" id="n0G-kb-adX"/>
                                 </connections>
