@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -167,24 +168,24 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-CV-A1S">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-CV-A1S">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPj-XT-muL">
-                                            <rect key="frame" x="10" y="107.5" width="31" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-vy-10u">
-                                            <rect key="frame" x="10" y="10" width="42" height="47"/>
+                                            <rect key="frame" x="5" y="101" width="41.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-vy-10u">
+                                            <rect key="frame" x="10" y="10" width="42" height="47"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezC-kt-5FG">
-                                            <rect key="frame" x="10" y="127" width="31" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="5" y="125.5" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -195,16 +196,15 @@
                                         <constraint firstItem="zyU-CV-A1S" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" id="Hoh-Qb-3wt"/>
                                         <constraint firstItem="uKs-vy-10u" firstAttribute="top" secondItem="ixH-AI-X6w" secondAttribute="top" constant="10" id="IeV-VU-3ZS"/>
                                         <constraint firstItem="uKs-vy-10u" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="L3L-c2-cOX"/>
-                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="R6c-DG-bqT"/>
+                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="5" id="R6c-DG-bqT"/>
                                         <constraint firstItem="zyU-CV-A1S" firstAttribute="top" secondItem="ixH-AI-X6w" secondAttribute="top" id="V3W-B6-Wpr"/>
-                                        <constraint firstItem="ZPj-XT-muL" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="10" id="ZbV-QB-Ndk"/>
+                                        <constraint firstItem="ZPj-XT-muL" firstAttribute="leading" secondItem="ixH-AI-X6w" secondAttribute="leading" constant="5" id="ZbV-QB-Ndk"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZPj-XT-muL" secondAttribute="trailing" constant="10" id="dnd-Rt-HJs"/>
-                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="top" secondItem="ZPj-XT-muL" secondAttribute="bottom" constant="5" id="uNA-ev-jd1"/>
-                                        <constraint firstAttribute="bottom" secondItem="ezC-kt-5FG" secondAttribute="bottom" constant="8" id="vnF-Il-OXD"/>
+                                        <constraint firstItem="ezC-kt-5FG" firstAttribute="top" secondItem="ZPj-XT-muL" secondAttribute="bottom" constant="4" id="uNA-ev-jd1"/>
+                                        <constraint firstAttribute="bottom" secondItem="ezC-kt-5FG" secondAttribute="bottom" constant="4" id="vnF-Il-OXD"/>
                                         <constraint firstAttribute="trailing" secondItem="zyU-CV-A1S" secondAttribute="trailing" id="wjG-kD-qRv"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" red="0.93053671979999997" green="0.55362296820000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="ZPj-XT-muL" id="Woq-EN-F71"/>
                                     <outlet property="dateLabel" destination="ezC-kt-5FG" id="9Lr-32-4LB"/>

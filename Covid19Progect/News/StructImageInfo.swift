@@ -9,6 +9,6 @@ import UIKit
 
 struct ImageInfo {
     var image: UIImage?
-    let url: URL?
+    let urlImage: URL?
     var isLoading = false
 }

@@ -14,13 +14,12 @@ class NewsViewController: UICollectionViewController {
     
     
     var arrayArticle = [Article]()
-    var arrayImage = [ImageInfo]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let spacing: CGFloat = 20
+        let spacing: CGFloat = 3
         let sizeCell = (UIScreen.main.bounds.width - 3 * spacing) / 2
         
         let cellSize = CGSize(width: sizeCell, height: sizeCell)
@@ -70,8 +69,29 @@ class NewsViewController: UICollectionViewController {
         cell.authorLabel?.text = arrayArticle[indexPath.row].author
         cell.titleLabel?.text = arrayArticle[indexPath.row].title
         cell.dateLabel.text = outputDate
-        //        cell.imageNews?.image = arrayArticle[indexPath.row].urlToImage
         
+        
+        if let image = arrayArticle[indexPath.row].imageInfo.image {
+            cell.imageNews.image = image
+        } else {
+            let noImage = UIImage(named: "no_img")!
+            cell.imageNews.image = noImage
+            if let imageURL = arrayArticle[indexPath.row].urlToImage {
+                if arrayArticle[indexPath.row].imageInfo.isLoading == false {
+                    DispatchQueue.global().async {
+                        if let data = try? Data(contentsOf: imageURL) {
+                            self.arrayArticle[indexPath.row].imageInfo.isLoading = false
+                            let imageFromData = UIImage(data: data)
+                            DispatchQueue.main.async {
+                                self.arrayArticle[indexPath.row].imageInfo.image = imageFromData
+                                self.collectionView.reloadData()
+                            }
+                        }
+                    }
+                }
+                arrayArticle[indexPath.row].imageInfo.isLoading = true
+            }
+        }
         return cell
     }
     
@@ -90,8 +110,6 @@ class NewsViewController: UICollectionViewController {
                     let response = try JSONDecoder().decode(Articles.self, from: data)
                     self.arrayArticle = response.articles
                     for element in response.articles{
-//                        self.arrayImage.append(ImageInfo(image: nil, url: urlRequest, isLoading: <#T##Bool#>))
-                        
                     }
                     
                     print(response.articles.count)
