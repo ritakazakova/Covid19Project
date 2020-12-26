@@ -34,6 +34,9 @@ class NewsViewController: UICollectionViewController {
         collectionView.setCollectionViewLayout(layout, animated: true)
         
         loadDataForNews()
+        
+        collectionView.refreshControl = UIRefreshControl()
+        collectionView.refreshControl?.addTarget(self, action: #selector(didPullToRefreshNews), for: .valueChanged)
     }
     
     
@@ -85,6 +88,7 @@ class NewsViewController: UICollectionViewController {
                             DispatchQueue.main.async {
                                 self.arrayArticle[indexPath.row].imageInfo.image = imageFromData
                                 self.collectionView.reloadData()
+                                self.collectionView.refreshControl?.endRefreshing()
                             }
                         }
                     }
@@ -124,4 +128,8 @@ class NewsViewController: UICollectionViewController {
         dataTask.resume()
     }
     
+    @objc func didPullToRefreshNews() {
+        
+        loadDataForNews()
+    }
 }

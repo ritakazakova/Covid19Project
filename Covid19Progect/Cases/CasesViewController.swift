@@ -17,6 +17,8 @@ class CasesViewController: UITableViewController {
         
         loadDataForCase()
         
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(didPullToRefreshCases), for: .valueChanged)
     }
     
     
@@ -27,13 +29,12 @@ class CasesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "DetailCasesViewController") as! DetailCasesViewController
         viewController.cases = arrayCountries[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
-        
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath)
@@ -46,7 +47,6 @@ class CasesViewController: UITableViewController {
         }
         
         let textInCell = "\(arrayCountries[indexPath.row].country)  Infected: \(arrayCountries[indexPath.row].infected)  Recovered: \(recoveredString) "
-        
         
         cell.textLabel?.text = textInCell
         cell.textLabel?.numberOfLines = 0
@@ -72,6 +72,7 @@ class CasesViewController: UITableViewController {
                     print(response.count)
                     DispatchQueue.main.async { [self] in
                         self.tableView.reloadData()
+                        self.tableView.refreshControl?.endRefreshing()
                     }
                 } catch {
                     print(error)
@@ -80,5 +81,10 @@ class CasesViewController: UITableViewController {
         }
         dataTask.resume()
     }
+    
+    
+    @objc func didPullToRefreshCases() {
         
+        loadDataForCase()
+    }
 }

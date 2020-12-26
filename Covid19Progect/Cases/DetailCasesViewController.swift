@@ -13,9 +13,7 @@ class DetailCasesViewController: UIViewController {
     @IBOutlet weak var recoveredLabel: UILabel!
     @IBOutlet weak var titleCountry: UINavigationItem!
     
-    
     var cases: Case?
-    
     
     override func viewDidLoad() {
         super .viewDidLoad()
