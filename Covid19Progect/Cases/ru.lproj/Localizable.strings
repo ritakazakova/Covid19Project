@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Covid19Progect
+
+  Created by Rita Kazakova on 1/8/21.
+  
+*/
+"Infected" = "Заражены";
+"Recovered" = "Выздоровели";

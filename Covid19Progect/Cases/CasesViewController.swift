@@ -46,7 +46,7 @@ class CasesViewController: UITableViewController {
             recoveredString = "-"
         }
         
-        let textInCell = "\(arrayCountries[indexPath.row].country)  Infected: \(arrayCountries[indexPath.row].infected)  Recovered: \(recoveredString) "
+        let textInCell = "\(arrayCountries[indexPath.row].country)  \(NSLocalizedString("Infected", comment: "")): \(arrayCountries[indexPath.row].infected)  \(NSLocalizedString("Recovered", comment: "")): \(recoveredString) "
         
         cell.textLabel?.text = textInCell
         cell.textLabel?.numberOfLines = 0

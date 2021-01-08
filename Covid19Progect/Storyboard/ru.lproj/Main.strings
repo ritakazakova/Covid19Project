@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "56a-cE-91X"; */
+"56a-cE-91X.normalTitle" = "Войти";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "BFo-P5-8nW"; */
+"BFo-P5-8nW.placeholder" = "Пароль";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "CDG-VN-M6h"; */
+"CDG-VN-M6h.normalTitle" = "Выход";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "GxX-Ff-jfI"; */
+"GxX-Ff-jfI.text" = "Имя пользователя";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "Luk-Mp-d6M"; */
+"Luk-Mp-d6M.title" = "Новости";
+
+/* Class = "UINavigationItem"; title = "News"; ObjectID = "Nc7-9C-Kdo"; */
+"Nc7-9C-Kdo.title" = "Новости";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "NrN-cK-iE8"; */
+"NrN-cK-iE8.placeholder" = "Имя пользователя";
+
+/* Class = "UINavigationItem"; title = "Cases"; ObjectID = "OWU-yr-imt"; */
+"OWU-yr-imt.title" = "Статистика";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Usx-J8-F9s"; */
+"Usx-J8-F9s.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZPj-XT-muL"; */
+"ZPj-XT-muL.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "Zan-G1-JqT"; */
+"Zan-G1-JqT.title" = "Профиль";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ezC-kt-5FG"; */
+"ezC-kt-5FG.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Country"; ObjectID = "tqL-sw-CIk"; */
+"tqL-sw-CIk.title" = "Страна";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uKs-vy-10u"; */
+"uKs-vy-10u.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Cases"; ObjectID = "vfJ-uI-lQP"; */
+"vfJ-uI-lQP.title" = "Статистика";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xuS-LP-lLZ"; */
+"xuS-LP-lLZ.text" = "Label";

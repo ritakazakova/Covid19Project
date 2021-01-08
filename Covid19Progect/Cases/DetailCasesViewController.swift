@@ -20,12 +20,12 @@ class DetailCasesViewController: UIViewController {
         
         
         if let recoveredInt1 = cases?.recovered {
-            recoveredLabel.text = "Recovered: \(recoveredInt1)"
+            recoveredLabel.text = "\(NSLocalizedString("Recovered", comment: "")): \(recoveredInt1)"
         } else {
-            recoveredLabel.text = "Recovered: -"
+            recoveredLabel.text = "\(NSLocalizedString("Recovered", comment: "")): -"
         }
         
-        infectedLabel.text = "Infected: \(cases!.infected)"
+        infectedLabel.text = "\(NSLocalizedString("Infected", comment: "")): \(cases!.infected)"
         titleCountry.title = cases!.country
         
     }
