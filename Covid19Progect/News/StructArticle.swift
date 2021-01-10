@@ -19,12 +19,6 @@ struct Article: Codable {
         case author, title, publishedAt, urlToImage
     }
     
-//    init(author: String? = nil, title: String? = nil, publishedAt: String, urlToImage: String? = nil) {
-//        self.author = author
-//        self.title = title!
-//        self.publishedAt = publishedAt
-//        self.urlToImage = urlToImage
-//    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
