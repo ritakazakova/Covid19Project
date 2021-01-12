@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     let storage = UserDefaults.standard
     let keyForUsername = "Value Username"
     
-    @IBOutlet weak var login: UIButton!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var userNameTopView: NSLayoutConstraint!
-    @IBOutlet var loginBottomView: NSLayoutConstraint!
+    @IBOutlet private weak var login: UIButton!
+    @IBOutlet private weak var password: UITextField!
+    @IBOutlet private weak var userName: UITextField!
+    @IBOutlet private weak var userNameTopView: NSLayoutConstraint!
+    @IBOutlet private var loginBottomView: NSLayoutConstraint!
     
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
@@ -55,14 +55,14 @@ class ViewController: UIViewController {
     }
     
     
-    func saveUsername() {
+    private func saveUsername() {
         
         storage.setValue(userName.text, forKey: keyForUsername)
         storage.synchronize()
     }
     
     
-    @IBAction func PressedLogin(_ sender: UIButton) {
+    @IBAction private func PressedLogin(_ sender: UIButton) {
         
         saveUsername()
         
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         present(viewController, animated: true, completion: nil)
     }
     
-    func textFieldWithText() {
+    private func textFieldWithText() {
         let checkLoginPassword = CheckLoginPassword()
         if checkLoginPassword.checkLoginAndPassword(userName: userName.text!, password: password.text!) {
             login.isEnabled = true
@@ -81,12 +81,12 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func userNameAction(_ sender: UITextField) {
+    @IBAction private func userNameAction(_ sender: UITextField) {
         textFieldWithText()
     }
     
     
-    @IBAction func passwordAction(_ sender: UITextField) {
+    @IBAction private func passwordAction(_ sender: UITextField) {
         textFieldWithText()
     }
     
