@@ -13,10 +13,11 @@ struct Article: Codable {
     let title: String
     let publishedAt: String
     let urlToImage: URL?
+    let url: URL
     var imageInfo: ImageInfo
     
     private enum CodingKeys: String, CodingKey {
-        case author, title, publishedAt, urlToImage
+        case author, title, publishedAt, urlToImage, url
     }
     
     
@@ -26,6 +27,7 @@ struct Article: Codable {
         title = try container.decode(String.self, forKey: .title)
         publishedAt = try container.decode(String.self, forKey: .publishedAt)
         urlToImage = try? container.decode(URL.self, forKey: .urlToImage)
+        url = try container.decode(URL.self, forKey: .url)
         imageInfo = ImageInfo(image: nil, urlImage: urlToImage, isLoading: false)
     }
 }

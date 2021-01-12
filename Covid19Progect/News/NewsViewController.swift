@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 private let reuseIdentifier = "CollectionCell"
 
@@ -132,4 +133,17 @@ class NewsViewController: UICollectionViewController {
         
         loadDataForNews()
     }
+    
+//    @IBAction func openWebPage() {
+//        openLink("\(arrayArticle[IndexPath().row].url)")
+//    }
+//
+//    private func openLink(URL: url) {
+//        guard arrayArticle[IndexPath().row].url != nil else {
+//            return
+//        }
+//
+//        let safariVC = SFSafariViewController(url: arrayArticle[IndexPath().row].url)
+//        present(safariVC, animated: true, completion: nil)
+//    }
 }

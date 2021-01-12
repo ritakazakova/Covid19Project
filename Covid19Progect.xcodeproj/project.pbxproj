@@ -22,6 +22,7 @@
 		116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0525618CD000DE49C8 /* StructCase.swift */; };
 		117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */; };
 		118AD78825A87B1F0049FBBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118AD78A25A87B1F0049FBBE /* Localizable.strings */; };
+		11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C864A325AE065800923ED3 /* CheckLoginPassword.swift */; };
 		11DA86E0255803C800A6CA73 /* DetailCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		118AD78925A87B1F0049FBBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		118AD78C25A87B260049FBBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		11C864A325AE065800923ED3 /* CheckLoginPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLoginPassword.swift; sourceTree = "<group>"; };
 		11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCasesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				111BD998254F0EE700FBCA3D /* ViewController.swift */,
+				11C864A325AE065800923ED3 /* CheckLoginPassword.swift */,
 			);
 			path = "Start View";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				11550A392556CC8E0020B755 /* NewsViewController.swift in Sources */,
 				11550A3C2556CCAF0020B755 /* CasesViewController.swift in Sources */,
 				115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */,
+				11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */,
 				111BD997254F0EE700FBCA3D /* SceneDelegate.swift in Sources */,
 				116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */,
 				115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */,

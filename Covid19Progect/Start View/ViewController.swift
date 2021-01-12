@@ -71,9 +71,9 @@ class ViewController: UIViewController {
         present(viewController, animated: true, completion: nil)
     }
     
-    
     func textFieldWithText() {
-        if userName.text! != "" && password.text! != "" {
+        let checkLoginPassword = CheckLoginPassword()
+        if checkLoginPassword.checkLoginAndPassword(userName: userName.text!, password: password.text!) {
             login.isEnabled = true
         } else {
             login.isEnabled = false
