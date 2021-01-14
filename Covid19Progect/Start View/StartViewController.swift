@@ -18,6 +18,7 @@ class StartViewController: UIViewController {
     @IBOutlet private weak var userNameTopView: NSLayoutConstraint!
     @IBOutlet private var loginBottomView: NSLayoutConstraint!
     
+    private let loginFieldsValidator: fieldValidator = CheckLoginPassword()
     
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
@@ -73,13 +74,11 @@ class StartViewController: UIViewController {
     }
     
     private func textFieldWithText() {
-//        let checkLoginPassword = CheckLoginPassword()
-        if let loginFieldsValidator: fieldValidator = CheckLoginPassword() {
+        if loginFieldsValidator.checkLoginAndPassword(userName: userName.text!, password: password.text!) {
             login.isEnabled = true
         } else {
             login.isEnabled = false
         }
-//        checkLoginPassword.checkLoginAndPassword(userName: userName.text!, password: password.text!)
     }
     
     
