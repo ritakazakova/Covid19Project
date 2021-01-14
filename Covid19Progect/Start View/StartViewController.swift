@@ -7,16 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
     
-    let storage = UserDefaults.standard
-    let keyForUsername = "Value Username"
+    private let storage = UserDefaults.standard
+    private let keyForUsername = "Value Username"
     
     @IBOutlet private weak var login: UIButton!
     @IBOutlet private weak var password: UITextField!
     @IBOutlet private weak var userName: UITextField!
     @IBOutlet private weak var userNameTopView: NSLayoutConstraint!
     @IBOutlet private var loginBottomView: NSLayoutConstraint!
+    
     
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
@@ -72,12 +73,13 @@ class ViewController: UIViewController {
     }
     
     private func textFieldWithText() {
-        let checkLoginPassword = CheckLoginPassword()
-        if checkLoginPassword.checkLoginAndPassword(userName: userName.text!, password: password.text!) {
+//        let checkLoginPassword = CheckLoginPassword()
+        if let loginFieldsValidator: fieldValidator = CheckLoginPassword() {
             login.isEnabled = true
         } else {
             login.isEnabled = false
         }
+//        checkLoginPassword.checkLoginAndPassword(userName: userName.text!, password: password.text!)
     }
     
     
