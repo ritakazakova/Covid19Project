@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class StartViewController: UIViewController {
     
@@ -18,7 +19,8 @@ class StartViewController: UIViewController {
     @IBOutlet private weak var userNameTopView: NSLayoutConstraint!
     @IBOutlet private var loginBottomView: NSLayoutConstraint!
     
-    private let loginFieldsValidator: fieldValidator = CheckLoginPassword()
+    
+    private let validator = Dependency().container.resolve(FieldValidator.self)
     
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
@@ -74,7 +76,7 @@ class StartViewController: UIViewController {
     }
     
     private func textFieldWithText() {
-        if loginFieldsValidator.checkLoginAndPassword(userName: userName.text!, password: password.text!) {
+        if validator?.checkLoginAndPassword(userName: userName.text ?? "", password: password.text ?? "") == true {
             login.isEnabled = true
         } else {
             login.isEnabled = false

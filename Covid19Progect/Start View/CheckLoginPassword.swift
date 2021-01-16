@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol fieldValidator {
+protocol FieldValidator {
     func checkLoginAndPassword(userName: String, password: String) -> Bool
 }
 
-class CheckLoginPassword: fieldValidator {
+class CheckLoginPassword: FieldValidator {
     func checkLoginAndPassword(userName: String, password: String) -> Bool {
         if userName != "" && password != "" {
             return true
