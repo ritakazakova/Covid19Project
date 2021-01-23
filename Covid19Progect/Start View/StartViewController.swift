@@ -22,6 +22,8 @@ class StartViewController: UIViewController {
     
     private let validator = Dependency().container.resolve(FieldValidator.self)
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
                 

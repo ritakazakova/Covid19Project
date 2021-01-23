@@ -8,5 +8,6 @@ target 'Covid19Progect' do
   # Pods for Covid19Progect
 
 pod 'Swinject'
+pod 'KeychainAccess'
 
 end

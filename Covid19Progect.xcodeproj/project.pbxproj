@@ -23,6 +23,8 @@
 		117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */; };
 		118AD78825A87B1F0049FBBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118AD78A25A87B1F0049FBBE /* Localizable.strings */; };
 		11C0FB6125B0C5A200DAD7C3 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */; };
+		11C0FB6425B743FC00DAD7C3 /* NightOrDayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */; };
+		11C0FB6725B9F64B00DAD7C3 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6625B9F64B00DAD7C3 /* Manager.swift */; };
 		11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C864A325AE065800923ED3 /* CheckLoginPassword.swift */; };
 		11DA86E0255803C800A6CA73 /* DetailCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */; };
 		8B9029E1ED7AC0AA87D4240D /* Pods_Covid19Progect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF41A718E3B57BA414D3E62 /* Pods_Covid19Progect.framework */; };
@@ -50,6 +52,8 @@
 		118AD78925A87B1F0049FBBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		118AD78C25A87B260049FBBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightOrDayMode.swift; sourceTree = "<group>"; };
+		11C0FB6625B9F64B00DAD7C3 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		11C864A325AE065800923ED3 /* CheckLoginPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLoginPassword.swift; sourceTree = "<group>"; };
 		11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCasesViewController.swift; sourceTree = "<group>"; };
 		7BF41A718E3B57BA414D3E62 /* Pods_Covid19Progect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Progect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,8 @@
 				111BD998254F0EE700FBCA3D /* StartViewController.swift */,
 				11C864A325AE065800923ED3 /* CheckLoginPassword.swift */,
 				11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */,
+				11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */,
+				11C0FB6625B9F64B00DAD7C3 /* Manager.swift */,
 			);
 			path = "Start View";
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				11DA86E0255803C800A6CA73 /* DetailCasesViewController.swift in Sources */,
 				111BD999254F0EE700FBCA3D /* StartViewController.swift in Sources */,
 				111BD995254F0EE700FBCA3D /* AppDelegate.swift in Sources */,
+				11C0FB6725B9F64B00DAD7C3 /* Manager.swift in Sources */,
 				117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */,
 				11550A362556CC6C0020B755 /* ProfileViewController.swift in Sources */,
 				116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */,
@@ -305,6 +312,7 @@
 				115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */,
 				11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */,
 				111BD997254F0EE700FBCA3D /* SceneDelegate.swift in Sources */,
+				11C0FB6425B743FC00DAD7C3 /* NightOrDayMode.swift in Sources */,
 				116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */,
 				11C0FB6125B0C5A200DAD7C3 /* Dependency.swift in Sources */,
 				115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */,
