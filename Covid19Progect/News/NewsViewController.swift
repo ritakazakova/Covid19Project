@@ -1,10 +1,3 @@
-//
-//  NewsViewController.swift
-//  Covid19Progect
-//
-//  Created by Rita Kazakova on 11/7/20.
-//
-
 import UIKit
 import SafariServices
 
@@ -113,7 +106,7 @@ class NewsViewController: UICollectionViewController {
                 do {
                     let response = try JSONDecoder().decode(Articles.self, from: data)
                     self.arrayArticle = response.articles
-                    for element in response.articles{
+                    for _ in response.articles{
                     }
                     
                     print(response.articles.count)

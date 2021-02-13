@@ -1,20 +1,34 @@
 PODS:
   - KeychainAccess (4.2.1)
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - KeychainAccess
+  - RxCocoa (= 6.0.0)
+  - RxSwift (= 6.0.0)
   - Swinject
 
 SPEC REPOS:
   trunk:
     - KeychainAccess
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - Swinject
 
 SPEC CHECKSUMS:
   KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: a2913333b84f22b5c6d8cdddc2d99e26b3c1d958
+PODFILE CHECKSUM: 17877032f077343362735946f3b3eb2b082b766d
 
 COCOAPODS: 1.10.0

@@ -9,23 +9,24 @@
 /* Begin PBXBuildFile section */
 		111BD995254F0EE700FBCA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD994254F0EE700FBCA3D /* AppDelegate.swift */; };
 		111BD997254F0EE700FBCA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD996254F0EE700FBCA3D /* SceneDelegate.swift */; };
-		111BD999254F0EE700FBCA3D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD998254F0EE700FBCA3D /* StartViewController.swift */; };
+		111BD999254F0EE700FBCA3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD998254F0EE700FBCA3D /* LoginViewController.swift */; };
 		111BD99C254F0EE700FBCA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111BD99A254F0EE700FBCA3D /* Main.storyboard */; };
 		111BD99E254F0EE800FBCA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111BD99D254F0EE800FBCA3D /* Assets.xcassets */; };
 		111BD9A1254F0EE800FBCA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111BD99F254F0EE800FBCA3D /* LaunchScreen.storyboard */; };
 		11550A362556CC6C0020B755 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11550A352556CC6C0020B755 /* ProfileViewController.swift */; };
 		11550A392556CC8E0020B755 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11550A382556CC8E0020B755 /* NewsViewController.swift */; };
 		11550A3C2556CCAF0020B755 /* CasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11550A3B2556CCAF0020B755 /* CasesViewController.swift */; };
-		115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703C6257C0A2C00AD3F12 /* StructArticles.swift */; };
-		115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703CB257D287600AD3F12 /* StructImageInfo.swift */; };
-		116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0125618BA200DE49C8 /* StructArticle.swift */; };
-		116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0525618CD000DE49C8 /* StructCase.swift */; };
+		115703C7257C0A2C00AD3F12 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703C6257C0A2C00AD3F12 /* Articles.swift */; };
+		115703CC257D287600AD3F12 /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115703CB257D287600AD3F12 /* ImageInfo.swift */; };
+		116DEC0225618BA200DE49C8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0125618BA200DE49C8 /* Article.swift */; };
+		116DEC0625618CD000DE49C8 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116DEC0525618CD000DE49C8 /* Case.swift */; };
 		117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */; };
 		118AD78825A87B1F0049FBBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118AD78A25A87B1F0049FBBE /* Localizable.strings */; };
 		11C0FB6125B0C5A200DAD7C3 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */; };
 		11C0FB6425B743FC00DAD7C3 /* NightOrDayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */; };
 		11C0FB6725B9F64B00DAD7C3 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0FB6625B9F64B00DAD7C3 /* Manager.swift */; };
 		11C7E2EF25C082420079B657 /* Covid19ProgectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7E2EE25C082420079B657 /* Covid19ProgectTests.swift */; };
+		11C7E2F925C3322A0079B657 /* MVVMStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7E2F825C332290079B657 /* MVVMStartViewController.swift */; };
 		11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C864A325AE065800923ED3 /* CheckLoginPassword.swift */; };
 		11DA86E0255803C800A6CA73 /* DetailCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */; };
 		8B9029E1ED7AC0AA87D4240D /* Pods_Covid19Progect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF41A718E3B57BA414D3E62 /* Pods_Covid19Progect.framework */; };
@@ -45,7 +46,7 @@
 		111BD991254F0EE700FBCA3D /* Covid19Progect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Progect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111BD994254F0EE700FBCA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		111BD996254F0EE700FBCA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		111BD998254F0EE700FBCA3D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		111BD998254F0EE700FBCA3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		111BD99B254F0EE700FBCA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		111BD99D254F0EE800FBCA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111BD9A0254F0EE800FBCA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,10 +56,10 @@
 		11550A352556CC6C0020B755 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		11550A382556CC8E0020B755 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		11550A3B2556CCAF0020B755 /* CasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesViewController.swift; sourceTree = "<group>"; };
-		115703C6257C0A2C00AD3F12 /* StructArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructArticles.swift; sourceTree = "<group>"; };
-		115703CB257D287600AD3F12 /* StructImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructImageInfo.swift; sourceTree = "<group>"; };
-		116DEC0125618BA200DE49C8 /* StructArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructArticle.swift; sourceTree = "<group>"; };
-		116DEC0525618CD000DE49C8 /* StructCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCase.swift; sourceTree = "<group>"; };
+		115703C6257C0A2C00AD3F12 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		115703CB257D287600AD3F12 /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
+		116DEC0125618BA200DE49C8 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		116DEC0525618CD000DE49C8 /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		118AD78925A87B1F0049FBBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		118AD78C25A87B260049FBBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		11C7E2EC25C082420079B657 /* Covid19ProgectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Covid19ProgectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C7E2EE25C082420079B657 /* Covid19ProgectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19ProgectTests.swift; sourceTree = "<group>"; };
 		11C7E2F025C082420079B657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11C7E2F825C332290079B657 /* MVVMStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMStartViewController.swift; sourceTree = "<group>"; };
 		11C864A325AE065800923ED3 /* CheckLoginPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLoginPassword.swift; sourceTree = "<group>"; };
 		11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCasesViewController.swift; sourceTree = "<group>"; };
 		7BF41A718E3B57BA414D3E62 /* Pods_Covid19Progect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Progect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,29 +119,26 @@
 		111BD993254F0EE700FBCA3D /* Covid19Progect */ = {
 			isa = PBXGroup;
 			children = (
-				116DEBFE25618A4800DE49C8 /* Delegates */,
-				116DEBFA2561898000DE49C8 /* Start View */,
+				1177CE3225D80F1000511AEB /* Resources */,
+				1177CE3125D80EBB00511AEB /* Core */,
+				1177CE3025D80E4600511AEB /* Application */,
+				116DEBFA2561898000DE49C8 /* LoginView */,
 				116DEBFB256189E000DE49C8 /* News */,
 				116DEBFC256189F100DE49C8 /* Cases */,
 				116DEBFD256189F900DE49C8 /* Profile */,
 				116DEC0025618A9200DE49C8 /* Storyboard */,
-				111BD99D254F0EE800FBCA3D /* Assets.xcassets */,
 				111BD99F254F0EE800FBCA3D /* LaunchScreen.storyboard */,
-				111BD9A2254F0EE800FBCA3D /* Info.plist */,
 			);
 			path = Covid19Progect;
 			sourceTree = "<group>";
 		};
-		116DEBFA2561898000DE49C8 /* Start View */ = {
+		116DEBFA2561898000DE49C8 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				111BD998254F0EE700FBCA3D /* StartViewController.swift */,
+				111BD998254F0EE700FBCA3D /* LoginViewController.swift */,
 				11C864A325AE065800923ED3 /* CheckLoginPassword.swift */,
-				11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */,
-				11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */,
-				11C0FB6625B9F64B00DAD7C3 /* Manager.swift */,
 			);
-			path = "Start View";
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		116DEBFB256189E000DE49C8 /* News */ = {
@@ -147,9 +146,9 @@
 			children = (
 				11550A382556CC8E0020B755 /* NewsViewController.swift */,
 				117AAD8F25587E4A00D7B9D6 /* NewsCollectionViewCell.swift */,
-				116DEC0125618BA200DE49C8 /* StructArticle.swift */,
-				115703CB257D287600AD3F12 /* StructImageInfo.swift */,
-				115703C6257C0A2C00AD3F12 /* StructArticles.swift */,
+				116DEC0125618BA200DE49C8 /* Article.swift */,
+				115703CB257D287600AD3F12 /* ImageInfo.swift */,
+				115703C6257C0A2C00AD3F12 /* Articles.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -160,7 +159,7 @@
 				11550A3B2556CCAF0020B755 /* CasesViewController.swift */,
 				118AD78A25A87B1F0049FBBE /* Localizable.strings */,
 				11DA86DF255803C800A6CA73 /* DetailCasesViewController.swift */,
-				116DEC0525618CD000DE49C8 /* StructCase.swift */,
+				116DEC0525618CD000DE49C8 /* Case.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -173,21 +172,41 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		116DEBFE25618A4800DE49C8 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				111BD994254F0EE700FBCA3D /* AppDelegate.swift */,
-				111BD996254F0EE700FBCA3D /* SceneDelegate.swift */,
-			);
-			path = Delegates;
-			sourceTree = "<group>";
-		};
 		116DEC0025618A9200DE49C8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				111BD99A254F0EE700FBCA3D /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1177CE3025D80E4600511AEB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				111BD996254F0EE700FBCA3D /* SceneDelegate.swift */,
+				111BD994254F0EE700FBCA3D /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1177CE3125D80EBB00511AEB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				11C7E2F825C332290079B657 /* MVVMStartViewController.swift */,
+				11C0FB6625B9F64B00DAD7C3 /* Manager.swift */,
+				11C0FB6325B743FC00DAD7C3 /* NightOrDayMode.swift */,
+				11C0FB6025B0C5A200DAD7C3 /* Dependency.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1177CE3225D80F1000511AEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				111BD9A2254F0EE800FBCA3D /* Info.plist */,
+				111BD99D254F0EE800FBCA3D /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		11C7E2ED25C082420079B657 /* Covid19ProgectTests */ = {
@@ -363,21 +382,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DA86E0255803C800A6CA73 /* DetailCasesViewController.swift in Sources */,
-				111BD999254F0EE700FBCA3D /* StartViewController.swift in Sources */,
+				111BD999254F0EE700FBCA3D /* LoginViewController.swift in Sources */,
 				111BD995254F0EE700FBCA3D /* AppDelegate.swift in Sources */,
 				11C0FB6725B9F64B00DAD7C3 /* Manager.swift in Sources */,
 				117AAD9025587E4A00D7B9D6 /* NewsCollectionViewCell.swift in Sources */,
 				11550A362556CC6C0020B755 /* ProfileViewController.swift in Sources */,
-				116DEC0625618CD000DE49C8 /* StructCase.swift in Sources */,
+				116DEC0625618CD000DE49C8 /* Case.swift in Sources */,
 				11550A392556CC8E0020B755 /* NewsViewController.swift in Sources */,
 				11550A3C2556CCAF0020B755 /* CasesViewController.swift in Sources */,
-				115703CC257D287600AD3F12 /* StructImageInfo.swift in Sources */,
+				115703CC257D287600AD3F12 /* ImageInfo.swift in Sources */,
 				11C864A425AE065800923ED3 /* CheckLoginPassword.swift in Sources */,
 				111BD997254F0EE700FBCA3D /* SceneDelegate.swift in Sources */,
+				11C7E2F925C3322A0079B657 /* MVVMStartViewController.swift in Sources */,
 				11C0FB6425B743FC00DAD7C3 /* NightOrDayMode.swift in Sources */,
-				116DEC0225618BA200DE49C8 /* StructArticle.swift in Sources */,
+				116DEC0225618BA200DE49C8 /* Article.swift in Sources */,
 				11C0FB6125B0C5A200DAD7C3 /* Dependency.swift in Sources */,
-				115703C7257C0A2C00AD3F12 /* StructArticles.swift in Sources */,
+				115703C7257C0A2C00AD3F12 /* Articles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,5 @@
-//
-//  ProfileViewController.swift
-//  Covid19Progect
-//
-//  Created by Rita Kazakova on 11/7/20.
-//
-
 import UIKit
+import KeychainAccess
 
 class ProfileViewController: UIViewController {
     
@@ -15,7 +9,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.userNameLabel.text = UserDefaults.standard.string(forKey: "Value Username")
+        let keychainFromDependency = Dependency().container.resolve(Keychain.self)
+        self.userNameLabel.text = keychainFromDependency?["Value Username"]
         userNameLabel.textColor = .black
         
     }

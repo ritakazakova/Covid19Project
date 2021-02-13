@@ -1,10 +1,3 @@
-//
-//  Covid19ProgectTests.swift
-//  Covid19ProgectTests
-//
-//  Created by Rita Kazakova on 1/26/21.
-//
-
 import XCTest
 
 @testable import Covid19Progect

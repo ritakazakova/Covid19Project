@@ -1,0 +1,26 @@
+import UIKit
+
+
+struct Article: Codable {
+    let author: String?
+    let title: String
+    let publishedAt: String
+    let urlToImage: URL?
+    let url: URL
+    var imageInfo: ImageInfo
+    
+    private enum CodingKeys: String, CodingKey {
+        case author, title, publishedAt, urlToImage, url
+    }
+    
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        author = try? container.decode(String.self, forKey: .author)
+        title = try container.decode(String.self, forKey: .title)
+        publishedAt = try container.decode(String.self, forKey: .publishedAt)
+        urlToImage = try? container.decode(URL.self, forKey: .urlToImage)
+        url = try container.decode(URL.self, forKey: .url)
+        imageInfo = ImageInfo(image: nil, urlImage: urlToImage, isLoading: false)
+    }
+}

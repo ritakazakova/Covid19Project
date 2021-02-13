@@ -1,10 +1,3 @@
-//
-//  CasesViewController.swift
-//  Covid19Progect
-//
-//  Created by Rita Kazakova on 11/7/20.
-//
-
 import UIKit
 
 
@@ -69,7 +62,6 @@ class CasesViewController: UITableViewController {
                 do {
                     let response = try JSONDecoder().decode([Case].self, from: data)
                     self.arrayCountries = response
-                    print(response.count)
                     DispatchQueue.main.async { [self] in
                         self.tableView.reloadData()
                         self.tableView.refreshControl?.endRefreshing()

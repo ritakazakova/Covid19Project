@@ -1,10 +1,3 @@
-//
-//  NewsCollectionViewCell.swift
-//  Covid19Progect
-//
-//  Created by Rita Kazakova on 11/8/20.
-//
-
 import UIKit
 
 
