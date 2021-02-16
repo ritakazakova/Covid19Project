@@ -48,6 +48,11 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+        
+        NotificationManager().notification()
+        NotificationManager().scheduleNotification(notificationType: "")
+        
     }
     
     
