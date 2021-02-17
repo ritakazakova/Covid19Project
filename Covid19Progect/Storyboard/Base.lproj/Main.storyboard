@@ -131,7 +131,7 @@
         <!--News-->
         <scene sceneID="omZ-5d-x2X">
             <objects>
-                <navigationController id="nu3-05-Voe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewsView" id="nu3-05-Voe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" id="Luk-Mp-d6M"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O3w-6r-QoY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

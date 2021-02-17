@@ -10,6 +10,8 @@ class LoginViewController: UIViewController {
     
     let keychain = Dependency().container.resolve(Keychain.self)
     
+    let notificationManager = NotificationManager()
+    
     @IBOutlet private weak var login: UIButton!
     @IBOutlet private weak var password: UITextField!
     @IBOutlet private weak var userName: UITextField!
@@ -49,9 +51,9 @@ class LoginViewController: UIViewController {
         
         view.addGestureRecognizer(tap)
         
-        
-        NotificationManager().notification()
-        NotificationManager().scheduleNotification(notificationType: "")
+        notificationManager.notificationCenter.delegate = notificationManager
+        notificationManager.notification()
+        notificationManager.scheduleNotification()
         
     }
     

@@ -4,50 +4,68 @@ import NotificationCenter
 
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
+    let notificationCenter = UNUserNotificationCenter.current()
+    
     func notification() {
-        let notificationCenter = UNUserNotificationCenter.current()
+        
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         
-        notificationCenter.requestAuthorization(options: options) {
-            (didAllow, error) in
-            if !didAllow {
-                print("User has declined notifications")
+        notificationCenter.requestAuthorization(options: options) { granted, error in
+            if (granted) {
+                
             }
         }
         
-        notificationCenter.getNotificationSettings { (settings) in
-          if settings.authorizationStatus != .authorized {
-            // Notifications not allowed
-          }
-        }
+        notificationCenter.delegate = self
     }
     
     
-    func userNotificationCenter(
-        _ notificationCenter: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse,
-        withCompletionHandler completionHandler: @escaping () -> Void) {
-        print(response)
-    }
-    
-    func scheduleNotification(notificationType: String) {
+    func scheduleNotification() {
         
         let content = UNMutableNotificationContent() // Содержимое уведомления
-        
-        content.title = "Notification"
-        content.body = "This is example how to create "
+        content.categoryIdentifier = "category-go-to-details"
+        content.title = "Covid19Progect"
+        content.body = "Would you like to read news about Covid19?"
         content.sound = UNNotificationSound.default
-        content.badge = 1
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 14
+        dateComponents.minute = 04
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
         
         let request = UNNotificationRequest(
             identifier: "notification-ID",
             content: content,
             trigger: trigger
         )
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in print(error) })
+        
+        notificationCenter.add(request)
+        
+        let action = UNNotificationAction(
+            identifier: "action-ID",
+            title: "Of course!",
+            options: [.foreground]
+        )
+        
+        let category = UNNotificationCategory(
+            identifier: "category-go-to-details",
+            actions: [action],
+            intentIdentifiers: [],
+            options: []
+        )
+        
+        self.notificationCenter.setNotificationCategories([category])
     }
+    
+    
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+        }
     
 }
 
